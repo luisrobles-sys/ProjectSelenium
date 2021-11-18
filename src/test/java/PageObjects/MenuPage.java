@@ -11,7 +11,7 @@ public class MenuPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    @FindBy (linkText = "Generate Card Number") private WebElement lnk_generarTarjeta;  //Generador
+    @FindBy (linkText = "Generate Card Number") private WebElement lnk_generarTarjeta;  //Generador ///
 
 
     public MenuPage(WebDriver d) {
