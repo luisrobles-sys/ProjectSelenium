@@ -14,7 +14,7 @@ public class MenuPage {
     @FindBy (linkText = "Generate Card Number") private WebElement lnk_generarTarjeta;  //Generador
 
 
-    public MenuPage(WebDriver d) {
+    public MenuPage(WebDriver d) {      //Constructor
         driver = d;
         wait = new WebDriverWait(driver,30); //30 segundos de espera
         PageFactory.initElements(driver,this);

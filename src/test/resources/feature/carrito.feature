@@ -6,3 +6,7 @@ Feature: Comprar articulo con una tarjeta de Credito
   Scenario: Comprar un solo producto
     Given la pagina esta estable
     When doy click en generar tarjeta
+    And capturamos datos de la tarjeta
+    And capturamos el cvv de la tarjeta
+    And capturamos la fecha de la tarjeta
+    And capturamos el monto disponible de la tarjeta
