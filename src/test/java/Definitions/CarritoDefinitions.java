@@ -28,6 +28,7 @@ public class CarritoDefinitions {
 
     @And("capturamos datos de la tarjeta")                      //Definition
     public void capturamosDatosDeLaTarjeta() {
+        captura.CambiarVentana();
         captura.CapturarTarjeta();
     }
 
@@ -46,5 +47,6 @@ public class CarritoDefinitions {
     @And("capturamos el monto disponible de la tarjeta")        //Definition
     public void capturamosElMontoDisponibleDeLaTarjeta() {
         captura.CapturarMonto();
+        captura.CerrarVenta();
     }
 }
