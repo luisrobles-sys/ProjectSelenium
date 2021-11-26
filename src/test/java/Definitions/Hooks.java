@@ -22,6 +22,6 @@ public class Hooks {
     @After  //Limpia los Cookies y cerrar la conexión.
     public static void tearDown (){
         driver.manage().deleteAllCookies();
-        driver.close();
+        //driver.close();
     }
 }

@@ -1,6 +1,7 @@
 package Definitions;
 
 import PageObjects.CapturarDatosTarjetaPage;
+import PageObjects.CheckCreditPage;
 import PageObjects.MenuPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,10 +10,14 @@ import io.cucumber.java.en.When;
 public class CarritoDefinitions {
     MenuPage menu;
     CapturarDatosTarjetaPage captura;
+    CheckCreditPage credit;
 
     public CarritoDefinitions() {
         menu = new MenuPage(Hooks.driver);
         captura = new CapturarDatosTarjetaPage(Hooks.driver);
+        credit = new CheckCreditPage(Hooks.driver);
+
+
     }
 
     @Given("la pagina esta estable")
@@ -48,5 +53,18 @@ public class CarritoDefinitions {
     public void capturamosElMontoDisponibleDeLaTarjeta() {
         captura.CapturarMonto();
         captura.CerrarVenta();
+    }
+
+    @When("doy click en Check Credit")
+    public void doyClickEnCheckCredit() {
+        menu.clickCheckCredit();
+
+    }
+
+
+    @And("ingreso el dato de la tarjeta y doy click")
+    public void ingresoElDatoDeLaTarjetaYDoyClick() {
+        credit.IngresarDatoTarjeta();
+        credit.ClickBtn();
     }
 }

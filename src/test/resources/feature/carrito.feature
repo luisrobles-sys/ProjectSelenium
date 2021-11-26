@@ -10,3 +10,5 @@ Feature: Comprar articulo con una tarjeta de Credito
     And capturamos el cvv de la tarjeta
     And capturamos la fecha de la tarjeta
     And capturamos el monto disponible de la tarjeta
+    When doy click en Check Credit
+    And ingreso el dato de la tarjeta y doy click

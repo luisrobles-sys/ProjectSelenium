@@ -12,6 +12,7 @@ public class MenuPage {
     private WebDriverWait wait;
 
     @FindBy (linkText = "Generate Card Number") private WebElement lnk_generarTarjeta;  //Generador
+    @FindBy (linkText = "Check Credit Card Limit") private WebElement lnk_checkCredit;
 
 
     public MenuPage(WebDriver d) {      //Constructor
@@ -25,4 +26,9 @@ public class MenuPage {
         wait.until(ExpectedConditions.elementToBeClickable(lnk_generarTarjeta));
         lnk_generarTarjeta.click();
     }
+
+    public void clickCheckCredit(){        //Wait ya ingresó anteriormente
+        lnk_checkCredit.click();
+    }
+
 }
